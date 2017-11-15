@@ -1,29 +1,28 @@
-void setup () {
+int xposition = 10;
+int speed = 10;
+void setup(){
 size(500,500);
+}
 
-fill(#14E502);
-rect(0,0,400,400);
+void draw(){
+  background(220);
+  
+fill(0,0,255);
+  if(mousePressed){
+    fill(255,0,0);
+  }
+  
+  
+ellipse(xposition,250,50,50);
 
-fill(#9D5008);
-rect(50,1,100,20);
+xposition= xposition + speed;
 
+if(xposition > width){
+speed = -10;
 
+}
+if(xposition < 0){
+ speed = 10; 
+ }
 
-rect(250,1,100,20);
-
-fill(#FFFFFF);
-
-ellipse(100,100,100,200);
-
-ellipse(300,100,100,200);
-
-fill(#000003);
-ellipse(300,100,50,100);
-
-fill(#000003);
-ellipse(100,100,50,100);
-
-fill(#0006FC);
-
-triangle(150,250,210,450,200,200);
 }
